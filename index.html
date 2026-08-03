@@ -3,17 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Surat Titans — Power. Pride. Legacy. Official Pro Govinda League franchise." />
-    <meta name="keywords" content="Surat Titans, Pro Govinda League, Dahi Handi, India, Sports, Gujarat" />
-    <meta property="og:title" content="Surat Titans | Pro Govinda League" />
-    <meta property="og:description" content="Surat Titans — Power. Pride. Legacy. Official Pro Govinda League franchise." />
-    <meta property="og:type" content="website" />
+
+    <!-- Primary SEO — overridden per-page by usePageMeta hook -->
+    <title>Surat Titans | Official Pro Govinda League Franchise</title>
+    <meta name="description" content="Surat Titans — Power. Pride. Legacy. Official Pro Govinda League franchise representing the courage, craft and sporting heritage of Surat and Mumbai." />
+    <meta name="keywords" content="Surat Titans, Pro Govinda League, Dahi Handi, Gujarat, Mumbai, Human Pyramid, Govinda, Indian Sports, Sports Franchise" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Surat Titans" />
+    <meta name="theme-color" content="#2a0a4a" />
+    <meta name="msapplication-TileColor" content="#2a0a4a" />
+
+    <!-- Canonical (updated per-page by hook) -->
+    <link rel="canonical" href="https://surattitans.com/" id="canonical-link" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" id="og-type" />
+    <meta property="og:site_name" content="Surat Titans" />
+    <meta property="og:title" content="Surat Titans | Official Pro Govinda League Franchise" id="og-title" />
+    <meta property="og:description" content="Surat Titans — Power. Pride. Legacy. Official Pro Govinda League franchise." id="og-desc" />
+    <meta property="og:url" content="https://surattitans.com/" id="og-url" />
+    <meta property="og:image" content="https://surattitans.com/Surat-Titans.jpg" id="og-image" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Surat Titans — Official Pro Govinda League Franchise" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Surat Titans | Pro Govinda League" />
-    <meta name="twitter:description" content="Surat Titans — Power. Pride. Legacy. Official Pro Govinda League franchise." />
-    <title>Surat Titans | Pro Govinda League</title>
+    <meta name="twitter:title" content="Surat Titans | Official Pro Govinda League Franchise" id="tw-title" />
+    <meta name="twitter:description" content="Surat Titans — Power. Pride. Legacy. Official Pro Govinda League franchise." id="tw-desc" />
+    <meta name="twitter:image" content="https://surattitans.com/Surat-Titans.jpg" id="tw-image" />
+    <meta name="twitter:image:alt" content="Surat Titans" />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/logo.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <!-- JSON-LD: Organization + SportsTeam -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SportsOrganization",
+          "name": "Surat Titans",
+          "url": "https://surattitans.com",
+          "logo": "https://surattitans.com/logo.png",
+          "image": "https://surattitans.com/Surat-Titans.jpg",
+          "description": "Surat Titans is the official Pro Govinda League franchise representing the courage, craft and sporting heritage of Mumbai and Surat.",
+          "sport": "Dahi Handi / Human Pyramid",
+          "foundingDate": "2023",
+          "location": {
+            "@type": "Place",
+            "name": "Surat, Gujarat, India"
+          },
+          "sameAs": [
+            "https://www.instagram.com/surat.titans/",
+            "https://www.instagram.com/progovindaindia/"
+          ],
+          "memberOf": {
+            "@type": "SportsLeague",
+            "name": "Pro Govinda League",
+            "url": "https://www.progovindaindia.com"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "name": "Surat Titans",
+          "url": "https://surattitans.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://surattitans.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
