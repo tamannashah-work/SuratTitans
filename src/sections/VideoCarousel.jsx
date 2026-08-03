@@ -3,10 +3,10 @@ import React from 'react';
 export default function VideoCarousel() {
   const videos = [
     { id: 1, type: 'video', src: '/videos/practice session.mp4' },
-    { id: 5, type: 'video', src: '/videos/IMG_5856.MOV' },
-    { id: 2, type: 'video', src: '/videos/C7056.MP4' },
-    { id: 3, type: 'video', src: '/videos/C7057.MP4' },
-    { id: 4, type: 'video', src: '/videos/C7060.MP4' }
+    { id: 5, type: 'video', src: '/videos/IMG_5856.mp4' },
+    { id: 2, type: 'video', src: '/videos/C7056.mp4' },
+    { id: 3, type: 'video', src: '/videos/C7057.mp4' },
+    { id: 4, type: 'video', src: '/videos/C7060.mp4' }
   ];
 
   return (

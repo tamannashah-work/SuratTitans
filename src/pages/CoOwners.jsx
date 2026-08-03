@@ -124,7 +124,7 @@ export default function CoOwners() {
         </div>
         
         <div data-r="scale" data-r-delay="1" style={{ margin: '80px auto 0', maxWidth: '900px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
-           <video src="/videos/MD170080.MP4" autoPlay loop muted playsInline preload="none" style={{ width: '100%', height: 'auto', display: 'block' }}></video>
+           <video src="/videos/MD170080.mp4" autoPlay loop muted playsInline preload="none" style={{ width: '100%', height: 'auto', display: 'block' }}></video>
         </div>
       </section>
     </main>
