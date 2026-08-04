@@ -96,6 +96,9 @@ export default function App() {
 
   return (
     <>
+      <div className="top-banner">
+        OFFICIAL MATCH DATES ANNOUNCED 25 &bull; 26 &bull; 27 AUGUST 2026
+      </div>
       <header className={`header ${scrolled || isCoOwnersPage ? 'scrolled' : ''}`}>
         <a className="brand" href="/#home" aria-label="Surat Titans home"><img src="/logo.png" alt="ST Logo" style={{ height: '55px', width: 'auto' }} /><span>SURAT TITANS</span></a>
         <button className="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><i></i><i></i></button>
@@ -107,7 +110,7 @@ export default function App() {
           <a href="/#journey">Journey</a>
           <a href="/#media">Media</a>
           <a href="/#gallery">Gallery</a>
-          <a className="sponsor-link" href="/#contact">Become a sponsor <span>→</span></a>
+          <a className="sponsor-link" href="/#contact">Contact us <span>→</span></a>
         </nav>
       </header>
 

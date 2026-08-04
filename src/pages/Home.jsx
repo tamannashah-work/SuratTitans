@@ -15,7 +15,7 @@ import ReelCarousel from '../sections/ReelCarousel'
 import VideoCarousel from '../sections/VideoCarousel'
 
 export default function Home() {
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
+  const [videoModalSrc, setVideoModalSrc] = useState(null)
   const [formData, setFormData] = useState({ name: '', email: '', countryCode: '+91', phone: '', message: '' })
   const [status, setStatus] = useState('')
 
@@ -54,9 +54,8 @@ export default function Home() {
           <p className="hero-text">A new era of tradition. A global dream. Built on the courage and spirit of Mumbai.</p>
           <div className="actions">
             <a className="button gold" href="#team">Meet the team <span>→</span></a>
-            <button className="watch" onClick={() => setIsVideoModalOpen(true)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', outline: 'none' }}><b>▶</b> Watch highlights</button>
+            <button className="watch" onClick={() => setVideoModalSrc('/videos/practice session.mp4')} style={{ background: 'transparent', border: 'none', cursor: 'pointer', outline: 'none' }}><b>▶</b> Watch highlights</button>
           </div>
-
           <div className="hero-stats">
             <div><strong>2023</strong><span>Founded</span></div>
             <div><strong>50+</strong><span>Athletes</span></div>
@@ -224,23 +223,28 @@ export default function Home() {
           <a className="text-button" href="#contact">View all media <b>→</b></a>
         </div>
         <div className="news-grid">
-          <article className="news-lead" data-r="fade-up">
-            <span>FEATURED</span>
-            <h3>Surat Titans unveil the next chapter of their journey</h3>
-            <a href="#contact">Read story →</a>
+          <article className="news-card" data-r="fade-up" style={{ position: 'relative', overflow: 'hidden', padding: 0, minHeight: '400px' }}>
+            <video autoPlay loop muted playsInline preload="none" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 0.5 }} src="/videos/jiohotstar.mp4"></video>
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(20, 5, 30, 0.85), transparent)', zIndex: 1 }}></div>
+            <div style={{ position: 'relative', zIndex: 2, padding: '25px', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'flex-end', pointerEvents: 'none' }}>
+              <span style={{ color: '#ccc', pointerEvents: 'auto' }}>Broadcast Update</span>
+              <h3 style={{ color: '#fff', textShadow: '0 2px 10px rgba(0,0,0,0.5)', pointerEvents: 'auto' }}>PRO GOVINDA LEAGUE TO BE STREAMED LIVE ON JIOHOTSTAR</h3>
+              <button onClick={() => setVideoModalSrc('/videos/jiohotstar.mp4')} style={{ background: 'transparent', border: 'none', color: '#ccc', textShadow: '0 2px 10px rgba(0,0,0,0.5)', pointerEvents: 'auto', cursor: 'pointer', textAlign: 'left', padding: 0, font: 'inherit', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.8px', fontWeight: 800 }}>Watch now →</button>
+            </div>
           </article>
           <article className="news-card" data-r="fade-up" data-r-delay="1">
-            <span>Broadcast Update</span>
-            <h3>PRO GOVINDA LEAGUE TO BE STREAMED LIVE ON JIOHOTSTAR</h3>
-            <a href="#">Read article <span>→</span></a>
+            <span>SEASON 4 ANNOUNCEMENT</span>
+            <h3 style={{ margin: '16px 0 10px' }}>OFFICIAL MATCH DATES REVEALED</h3>
+            <p style={{ margin: '0 0 15px 0', fontSize: '14px', lineHeight: '1.6' }}>
+              Mark your calendars! The Pro Govinda League Season 4 matches will take place on August 25, 26, and 27, 2026.</p>
           </article>
           <article className="news-card" data-r="fade-up" data-r-delay="2" style={{ position: 'relative', overflow: 'hidden', padding: 0, minHeight: '400px' }}>
             <video autoPlay loop muted playsInline preload="none" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 0.5, animation: 'revealVideo 2s ease-out 3s forwards' }} src="/videos/practice session.mp4"></video>
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(42, 10, 74, 1), transparent)', zIndex: 1, animation: 'hideOverlay 2s ease-out 3s forwards' }}></div>
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(20, 5, 30, 0.85), transparent)', zIndex: 1, animation: 'hideOverlay 2s ease-out 3s forwards' }}></div>
             <div style={{ position: 'relative', zIndex: 2, padding: '25px', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'flex-end', pointerEvents: 'none' }}>
-              <span style={{ color: 'var(--gold)', pointerEvents: 'auto' }}>VIDEO · 10 JUL 2026</span>
+              <span style={{ color: '#ccc', pointerEvents: 'auto' }}>VIDEO · 10 JUL 2026</span>
               <h3 style={{ color: '#fff', textShadow: '0 2px 10px rgba(0,0,0,0.5)', pointerEvents: 'auto' }}>Inside the Titans training camp.</h3>
-              <button onClick={() => setIsVideoModalOpen(true)} style={{ background: 'transparent', border: 'none', color: '#fff', textShadow: '0 2px 10px rgba(0,0,0,0.5)', pointerEvents: 'auto', cursor: 'pointer', textAlign: 'left', padding: 0, font: 'inherit', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.8px', fontWeight: 800 }}>Watch now →</button>
+              <button onClick={() => setVideoModalSrc('/videos/practice session.mp4')} style={{ background: 'transparent', border: 'none', color: '#fff', textShadow: '0 2px 10px rgba(0,0,0,0.5)', pointerEvents: 'auto', cursor: 'pointer', textAlign: 'left', padding: 0, font: 'inherit', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.8px', fontWeight: 800 }}>Watch now →</button>
             </div>
           </article>
         </div>
@@ -260,7 +264,7 @@ export default function Home() {
             <img src="/shreeji.jpeg" alt="Shreeji" className="sponsor-img" />
           </div>
         </div>
-        <a className="button gold" href="#contact">Become a sponsor <span>→</span></a>
+        <a className="button gold" href="#contact">Contact us <span>→</span></a>
       </section>
 
       <section className="gallery section" id="gallery">
@@ -272,13 +276,15 @@ export default function Home() {
           <p>Moments made with the entire city behind us.</p>
         </div>
         <div className="gallery-grid">
-          <div className="gallery-a" style={{ backgroundImage: "url('/team huddle.JPG')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-          <div className="gallery-b" style={{ backgroundImage: "url('/pyramid.JPG')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-          <div className="gallery-c" style={{ backgroundImage: "url('/pyramid2.JPG')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-          <div className="gallery-d" style={{ backgroundImage: "url('/owners3.JPG')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-          <div className="gallery-e" style={{ backgroundImage: "url('/PGL DAY 214742.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-          <div className="gallery-f" style={{ backgroundImage: "url('/PGL DAY 214750.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-          <div className="gallery-g" style={{ backgroundImage: "url('/team.JPG')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div style={{ gridColumn: 'span 2', gridRow: 'span 1', backgroundImage: "url('/gallery (3).JPG')" }}></div>
+          <div style={{ gridColumn: 'span 1', gridRow: 'span 2', backgroundImage: "url('/pyramid.JPG')" }}></div>
+          <div style={{ gridColumn: 'span 2', gridRow: 'span 2', backgroundImage: "url('/owners3.JPG')" }}></div>
+          <div style={{ gridColumn: 'span 1', gridRow: 'span 1', backgroundImage: "url('/PGL DAY 214750.jpg')" }}></div>
+          <div style={{ gridColumn: 'span 2', gridRow: 'span 2', backgroundImage: "url('/team.JPG')" }}></div>
+          <div style={{ gridColumn: 'span 1', gridRow: 'span 1', backgroundImage: "url('/pyramid2.JPG')" }}></div>
+          <div style={{ gridColumn: 'span 2', gridRow: 'span 2', backgroundImage: "url('/team huddle.JPG')" }}></div>
+          <div style={{ gridColumn: 'span 1', gridRow: 'span 1', backgroundImage: "url('/PGL DAY 214742.jpg')" }}></div>
+          <div style={{ gridColumn: 'span 1', gridRow: 'span 1', backgroundImage: "url('/gallery (2).jpg')" }}></div>
         </div>
       </section>
 
@@ -286,47 +292,49 @@ export default function Home() {
         <div>
           <p className="kicker"><span></span> Get in touch</p>
           <h2>LET’S BUILD<br />A <em>LEGACY.</em></h2>
-          <p>For partnership, media or general enquiries, our team would love to hear from you.</p>
+          <p>For partnership, media or general enquiries, our team would love to hear from you. Interested in becoming a sponsor? Reach out to us below.</p>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{ padding: '30px' }}>
           {status === 'success' ? (
             <div style={{ color: 'var(--gold)', fontSize: '14px', marginBottom: '15px' }}>Thanks! We've received your enquiry and will be in touch shortly.</div>
           ) : status === 'error' ? (
             <div style={{ color: '#ff4444', fontSize: '14px', marginBottom: '15px' }}>There was an error sending your message. Please try again later.</div>
           ) : null}
-          <label>Name<input type="text" name="name" required placeholder="Your name" value={formData.name} onChange={handleChange} /></label>
-          <label>Email<input type="email" name="email" required placeholder="you@company.com" value={formData.email} onChange={handleChange} /></label>
+          <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+            <label style={{ flex: '1 1 45%' }}>Name<input type="text" name="name" required placeholder="Your name" value={formData.name} onChange={handleChange} /></label>
+            <label style={{ flex: '1 1 45%' }}>Email<input type="email" name="email" required placeholder="you@company.com" value={formData.email} onChange={handleChange} /></label>
+          </div>
           <label>Phone
             <div style={{ display: 'flex', gap: '10px' }}>
               <select name="countryCode" value={formData.countryCode} onChange={handleChange} style={{ padding: '10px 0', background: 'transparent', border: '0', borderBottom: '1px solid rgba(42,10,74,.45)', outline: '0', font: '13px "DM Sans"', color: 'var(--ink)' }}>
-                <option value="+91">+91 (India)</option>
-                <option value="+1">+1 (USA/Canada)</option>
-                <option value="+44">+44 (UK)</option>
-                <option value="+61">+61 (Australia)</option>
-                <option value="+971">+971 (UAE)</option>
+                <option value="+91">+91</option>
+                <option value="+1">+1</option>
+                <option value="+44">+44</option>
+                <option value="+61">+61</option>
+                <option value="+971">+971</option>
               </select>
               <input type="tel" name="phone" required placeholder="Phone number" style={{ flex: 1 }} value={formData.phone} onChange={handleChange} />
             </div>
           </label>
-          <label>How can we help?<textarea name="message" required placeholder="Tell us about your enquiry" value={formData.message} onChange={handleChange}></textarea></label>
-          <button className="button gold" type="submit" disabled={status === 'loading'}>{status === 'loading' ? 'Sending...' : 'Send enquiry'} <span>→</span></button>
+          <label>How can we help?<textarea name="message" required placeholder="Tell us about your enquiry" value={formData.message} onChange={handleChange} style={{ minHeight: '50px' }}></textarea></label>
+          <button className="button gold" type="submit" disabled={status === 'loading'} style={{ marginTop: '5px' }}>{status === 'loading' ? 'Sending...' : 'Send enquiry'} <span>→</span></button>
         </form>
       </section>
 
-      {isVideoModalOpen && (
+      {videoModalSrc && (
         <div 
           style={{ position: 'fixed', inset: 0, zIndex: 100, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-          onClick={() => setIsVideoModalOpen(false)}
+          onClick={() => setVideoModalSrc(null)}
         >
           <div style={{ position: 'relative', width: '90%', maxWidth: '1000px', aspectRatio: '16/9' }}>
             <button 
-              onClick={() => setIsVideoModalOpen(false)}
+              onClick={() => setVideoModalSrc(null)}
               style={{ position: 'absolute', top: '-40px', right: 0, background: 'transparent', border: 'none', color: '#fff', fontSize: '40px', cursor: 'pointer' }}
             >
               &times;
             </button>
             <video 
-              src="/videos/practice session.mp4" 
+              src={videoModalSrc} 
               controls 
               autoPlay 
               style={{ width: '100%', height: '100%', objectFit: 'contain' }} 

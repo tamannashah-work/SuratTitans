@@ -25,7 +25,7 @@ export default function CoOwners() {
     {
       name: "Aparna Desai",
       image: "/aparna desai.jpeg",
-      vision: "My vision is to honour the spirit of our tradition, nurture exceptional sporting talent, and take Surat Titans from the heart of Surat to the world stage—with the ultimate dream of seeing our sport earn global and National recognition."
+      vision: ""
     }
   ];
 
@@ -93,11 +93,8 @@ export default function CoOwners() {
           <div data-r="fade-up">
             <h3 style={{ font: '800 42px "Barlow Condensed"', color: '#fff', WebkitTextFillColor: '#fff', marginBottom: '10px' }}>Shri. Purvesh Pratap Sarnaik</h3>
             <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontSize: '11px', color: 'var(--violet)', marginBottom: '25px', fontWeight: 'bold' }}>President, Pro Govinda League</p>
-            <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#ded3e8', marginBottom: '20px' }}>
-              Purvesh Sarnaik brings a fresh, athlete-centric vision to the Pro Govinda League and has been instrumental in shaping its journey since inception. Actively engaged with teams on the ground, he champions franchise development, nationwide talent scouting, and the implementation of high-performance standards.
-            </p>
             <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#ded3e8', marginBottom: '30px' }}>
-              His strategic leadership has been key to the league’s transformation into a serious, structured national sporting event—one that proudly bridges Indian tradition with modern athleticism.
+              Purvesh Sarnaik brings a fresh, athlete-centric vision to the Pro Govinda League, championing franchise development and nationwide talent scouting. His strategic leadership is transforming this traditional sport into a structured national event.
             </p>
             <a 
               href="https://www.progovindaindia.com" 
@@ -120,6 +117,24 @@ export default function CoOwners() {
              <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', maxWidth: '280px', width: '100%' }}>
                 <img src="/Purvesh.JPG" alt="Purvesh Sarnaik" style={{ width: '100%', height: 'auto', display: 'block' }} />
              </div>
+          </div>
+        </div>
+
+        <div className="heritage-grid" style={{ marginTop: '60px' }}>
+          <div data-r="fade-up" data-r-delay="1" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+             <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', maxWidth: '280px', width: '100%', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src="/bittu boss.jpeg" alt="Bittu Boss" style={{ width: '100%', height: '280px', objectFit: 'cover', transform: 'scale(1.25)', transformOrigin: 'center', display: 'block' }} />
+             </div>
+          </div>
+          <div data-r="fade-up">
+            <h3 style={{ font: '800 42px "Barlow Condensed"', color: '#fff', WebkitTextFillColor: '#fff', marginBottom: '10px' }}>Bittu Boss</h3>
+            <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontSize: '11px', color: 'var(--violet)', marginBottom: '25px', fontWeight: 'bold' }}>Official Mascot, Pro Govinda League</p>
+            <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#ded3e8', marginBottom: '20px' }}>
+              Meet Bittu Boss, the official mascot of the Pro Govinda League! He has officially kicked off his city-wide promotional journey after seeking blessings at Shri Siddhivinayak Mandir, Mumbai, alongside his newly inaugurated mascot vehicle.
+            </p>
+            <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#ded3e8', marginBottom: '20px' }}>
+              Bittu Boss is now traveling across the city, meeting fans and Govindas to spread the excitement for Pro Govinda League Season 4. Keep following his journey—there’s a lot more coming!
+            </p>
           </div>
         </div>
         
