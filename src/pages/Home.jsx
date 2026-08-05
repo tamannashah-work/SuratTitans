@@ -201,17 +201,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="performance">
-        <p className="kicker"><span></span> Titans by the numbers</p>
-        <div className="performance-grid">
-          <div><strong>12</strong><span>Matches played</span></div>
-          <div><strong>8</strong><span>Wins</span></div>
-          <div><strong>3</strong><span>Semi-finals</span></div>
-          <div><strong>02</strong><span>Player awards</span></div>
-          <div><strong>TOP 4</strong><span>League ranking</span></div>
-        </div>
-      </section>
-
       <ReelCarousel />
 
       <section className="media section" id="media">
