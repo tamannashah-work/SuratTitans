@@ -126,6 +126,9 @@ export default function ReelCarousel() {
   
   // Directly use the Instagram Reel codes
   const reelCodes = [
+    "Da-z0zloGBt",
+    "DbVHVJgiLb5",
+    "DbU6Khby_6t",
     "DbAmK1sCIiK",
     "DNJHcN9obwI",
     "DMslRRyyZWG",

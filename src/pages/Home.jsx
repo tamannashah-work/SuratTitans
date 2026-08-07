@@ -156,15 +156,12 @@ export default function Home() {
           <p>Meet the athletes who turn trust, timing and tenacity into something extraordinary.</p>
           <a className="button gold" href="#contact">Join the Titans <span>→</span></a>
         </div>
-        <div className="team-cards" style={{ alignItems: 'center' }}>
+        <div className="team-cards" style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
           <article className="athlete captain" data-r="scale" style={{ height: 'auto', padding: 0, background: 'transparent', overflow: 'hidden' }}>
-            <img src="/captain.jpeg" alt="Captain" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', transformOrigin: 'center', display: 'block' }} />
+            <img src="/team photo.jpeg" alt="Team Photo 1" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '12px' }} />
           </article>
           <article className="athlete" data-r="scale" data-r-delay="1" style={{ height: 'auto', padding: 0, background: 'transparent', overflow: 'hidden' }}>
-            <img src="/team_manager.jpeg" alt="Team Manager" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', transform: 'scale(1.1)', transformOrigin: 'center', display: 'block' }} />
-          </article>
-          <article className="athlete" data-r="scale" data-r-delay="2" style={{ height: 'auto', padding: 0, background: 'transparent', overflow: 'hidden' }}>
-            <img src="/team3.jpg" alt="Athlete" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', transform: 'scale(1.15)', transformOrigin: 'top', display: 'block' }} />
+            <img src="/gallery 4.jpeg" alt="Team Photo 2" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '12px' }} />
           </article>
         </div>
       </section>
@@ -236,6 +233,15 @@ export default function Home() {
               <button onClick={() => setVideoModalSrc('/videos/practice session.mp4')} style={{ background: 'transparent', border: 'none', color: '#fff', textShadow: '0 2px 10px rgba(0,0,0,0.5)', pointerEvents: 'auto', cursor: 'pointer', textAlign: 'left', padding: 0, font: 'inherit', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.8px', fontWeight: 800 }}>Watch now →</button>
             </div>
           </article>
+          <article className="news-card" data-r="fade-up" style={{ position: 'relative', overflow: 'hidden', padding: 0, minHeight: '500px', gridColumn: '1 / -1' }}>
+            <video autoPlay loop muted playsInline preload="none" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 0.6 }} src="/videos/promo vid.mp4"></video>
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(20, 5, 30, 0.85), transparent)', zIndex: 1 }}></div>
+            <div style={{ position: 'relative', zIndex: 2, padding: '30px', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'flex-end', pointerEvents: 'none' }}>
+              <span style={{ color: '#ccc', pointerEvents: 'auto' }}>OFFICIAL PROMO</span>
+              <h3 style={{ color: '#fff', textShadow: '0 2px 10px rgba(0,0,0,0.5)', pointerEvents: 'auto', fontSize: '42px', margin: '10px 0' }}>THE TITANS ARE READY</h3>
+              <button onClick={() => setVideoModalSrc('/videos/promo vid.mp4')} style={{ background: 'transparent', border: 'none', color: '#fff', textShadow: '0 2px 10px rgba(0,0,0,0.5)', pointerEvents: 'auto', cursor: 'pointer', textAlign: 'left', padding: 0, font: 'inherit', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 800 }}>Watch promo →</button>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -265,15 +271,20 @@ export default function Home() {
           <p>Moments made with the entire city behind us.</p>
         </div>
         <div className="gallery-grid">
-          <div style={{ gridColumn: 'span 2', gridRow: 'span 1', backgroundImage: "url('/gallery (3).JPG')" }}></div>
-          <div style={{ gridColumn: 'span 1', gridRow: 'span 2', backgroundImage: "url('/pyramid.JPG')" }}></div>
-          <div style={{ gridColumn: 'span 2', gridRow: 'span 2', backgroundImage: "url('/owners3.JPG')" }}></div>
-          <div style={{ gridColumn: 'span 1', gridRow: 'span 1', backgroundImage: "url('/PGL DAY 214750.jpg')" }}></div>
-          <div style={{ gridColumn: 'span 2', gridRow: 'span 2', backgroundImage: "url('/team.JPG')" }}></div>
-          <div style={{ gridColumn: 'span 1', gridRow: 'span 1', backgroundImage: "url('/pyramid2.JPG')" }}></div>
-          <div style={{ gridColumn: 'span 2', gridRow: 'span 2', backgroundImage: "url('/team huddle.JPG')" }}></div>
-          <div style={{ gridColumn: 'span 1', gridRow: 'span 1', backgroundImage: "url('/PGL DAY 214742.jpg')" }}></div>
-          <div style={{ gridColumn: 'span 1', gridRow: 'span 1', backgroundImage: "url('/gallery (2).jpg')" }}></div>
+          <img src="/team3.jpg" alt="Gallery" />
+          <img src="/gallery (3).JPG" alt="Gallery" />
+          <img src="/pyramid.JPG" alt="Gallery" />
+          <img src="/owners3.JPG" alt="Gallery" />
+          <img src="/PGL DAY 214750.jpg" alt="Gallery" />
+          <img src="/team.JPG" alt="Gallery" />
+          <img src="/pyramid2.JPG" alt="Gallery" />
+          <img src="/team huddle.JPG" alt="Gallery" />
+          <img src="/PGL DAY 214742.jpg" alt="Gallery" />
+          <img src="/gallery (2).jpg" alt="Gallery" />
+          <img src="/gallery 5.jpeg" alt="Gallery" />
+          <img src="/gallery 6.jpeg" alt="Gallery" />
+          <img src="/gallery 7.jpeg" alt="Gallery" />
+          <img src="/gallery 8.jpeg" alt="Gallery" />
         </div>
       </section>
 
