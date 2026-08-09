@@ -97,7 +97,8 @@ export default function App() {
   return (
     <>
       <div className="top-banner">
-        OFFICIAL MATCH DATES ANNOUNCED 25 &bull; 26 &bull; 27 AUGUST 2026
+        <span className="banner-dates">OFFICIAL MATCH DATES ANNOUNCED 25 &bull; 26 &bull; 27 AUGUST 2026</span>
+        <span className="banner-stream">STREAMING ON JIO HOTSTAR</span>
       </div>
       <header className={`header ${scrolled || isCoOwnersPage ? 'scrolled' : ''}`}>
         <a className="brand" href="/#home" aria-label="Surat Titans home"><img src="/logo.png" alt="ST Logo" style={{ height: '55px', width: 'auto' }} /><span>SURAT TITANS</span></a>
@@ -123,7 +124,7 @@ export default function App() {
         <a className="brand" href="/#home"><img src="/logo.png" alt="ST Logo" style={{ height: '55px', width: 'auto' }} /><span>SURAT TITANS</span></a>
         <p>© 2026 Surat Titans. Power. Pride. Legacy.</p>
         <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
-          <a href="https://www.instagram.com/surat.titans/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><InstagramIcon /> Surat Titans</a>
+          <a href="https://www.instagram.com/surat_titans/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><InstagramIcon /> Surat Titans</a>
           <a href="https://www.instagram.com/progovindaindia/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><InstagramIcon /> Pro Govinda</a>
         </div>
       </footer>

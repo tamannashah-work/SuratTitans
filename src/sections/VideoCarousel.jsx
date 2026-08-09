@@ -2,8 +2,9 @@ import React from 'react';
 
 export default function VideoCarousel() {
   const videos = [
-    { id: 1, type: 'video', src: '/videos/practice session.mp4' },
+    { id: 'falalnuma', type: 'video', src: '/videos/falalnuma reel.mp4' },
     { id: 6, type: 'video', src: '/videos/jiohotstar.mp4' },
+    { id: 1, type: 'video', src: '/videos/practice session.mp4' },
     { id: 5, type: 'video', src: '/videos/IMG_5856.mp4' },
     { id: 2, type: 'video', src: '/videos/C7056.mp4' },
     { id: 3, type: 'video', src: '/videos/C7057.mp4' },

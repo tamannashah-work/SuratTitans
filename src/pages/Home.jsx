@@ -1,6 +1,114 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
+const originalGallery = [
+  { src: '/team3.jpg', title: '2025 Highlights' },
+  { src: '/gallery (3).JPG', title: '2026 Taj Falaknuma Event' },
+  { src: '/pyramid.JPG', title: 'Pro Govinda League 2025' },
+  { src: '/owners3.JPG', title: 'Titans Ownership' },
+  { src: '/PGL DAY 214750.jpg', title: 'Match Day Action' },
+  { src: '/team.JPG', title: 'The Squad 2026' },
+  { src: '/pyramid2.JPG', title: 'Record Breaking Pyramid' },
+  { src: '/team huddle.JPG', title: 'Pre-match Strategy' },
+  { src: '/PGL DAY 214742.jpg', title: 'Govinda Spirit' },
+  { src: '/gallery (2).jpg', title: 'Community Outreach' },
+  { src: '/gallery 5.jpeg', title: 'Suryakumar Yadav (SKY) - Brand Ambassador' },
+  { src: '/gallery 6.jpeg', title: 'Victory Celebration' },
+  { src: '/gallery 7.jpeg', title: 'City Parade' },
+  { src: '/gallery 8.jpeg', title: 'Season Finale' }
+];
+
+const bittuBossGallery = [
+  { src: '/Bittu Boss Visit to Shreeji/10.jpeg', title: 'Bittu Boss Visit to Shreeji' },
+  { src: '/Bittu Boss Visit to Shreeji/12.jpeg', title: 'Bittu Boss Visit to Shreeji' },
+  { src: '/Bittu Boss Visit to Shreeji/2.jpeg', title: 'Bittu Boss Visit to Shreeji' },
+  { src: '/Bittu Boss Visit to Shreeji/3.jpeg', title: 'Bittu Boss Visit to Shreeji' },
+  { src: '/Bittu Boss Visit to Shreeji/4.jpeg', title: 'Bittu Boss Visit to Shreeji' },
+  { src: '/Bittu Boss Visit to Shreeji/5.jpeg', title: 'Bittu Boss Visit to Shreeji' },
+  { src: '/Bittu Boss Visit to Shreeji/6.jpeg', title: 'Bittu Boss Visit to Shreeji' },
+  { src: '/Bittu Boss Visit to Shreeji/7.jpeg', title: 'Bittu Boss Visit to Shreeji' },
+  { src: '/Bittu Boss Visit to Shreeji/8.jpeg', title: 'Bittu Boss Visit to Shreeji' },
+  { src: '/Bittu Boss Visit to Shreeji/9.jpeg', title: 'Bittu Boss Visit to Shreeji' },
+  { src: '/Bittu Boss Visit to Shreeji/WhatsApp Image 2026-08-09 at 4.55.13 PM.jpeg', title: 'Bittu Boss Visit to Shreeji' }
+];
+
+const tajGallery = [
+  { src: '/Taj Falaknuma/DSC06873.JPG', title: 'Taj Falaknuma Event 2026' },
+  { src: '/Taj Falaknuma/DSC06921.JPG', title: 'Taj Falaknuma Event 2026' },
+  { src: '/Taj Falaknuma/DSC07003.JPG', title: 'Taj Falaknuma Event 2026' },
+  { src: '/Taj Falaknuma/DSC07709.JPG', title: 'Taj Falaknuma Event 2026' },
+  { src: '/Taj Falaknuma/DSC07989.jpg', title: 'Taj Falaknuma Event 2026' },
+  { src: '/Taj Falaknuma/DSC08362.JPG', title: 'Taj Falaknuma Event 2026' },
+  { src: '/Taj Falaknuma/DSC08387.JPG', title: 'Taj Falaknuma Event 2026' },
+  { src: '/Taj Falaknuma/DSC08525.JPG', title: 'Taj Falaknuma Event 2026' }
+];
+
+const row1Images = [
+  originalGallery[0],
+  bittuBossGallery[0],
+  tajGallery[0],
+  { src: '/bus1.jpeg', title: 'PGL Branded Buses Hit the Roads!' },
+  originalGallery[1],
+  bittuBossGallery[1],
+  originalGallery[2],
+  bittuBossGallery[2],
+  tajGallery[1],
+  originalGallery[3],
+  bittuBossGallery[3],
+  originalGallery[4],
+  bittuBossGallery[4],
+  originalGallery[5],
+  bittuBossGallery[5],
+];
+
+const row2Images = [
+  originalGallery[6],
+  bittuBossGallery[6],
+  tajGallery[2],
+  originalGallery[7],
+  originalGallery[8],
+  bittuBossGallery[7],
+  tajGallery[3],
+  originalGallery[9],
+  originalGallery[10],
+  bittuBossGallery[8],
+  originalGallery[11],
+  originalGallery[12],
+];
+
+const row3Images = [
+  originalGallery[13],
+  bittuBossGallery[9],
+  tajGallery[4],
+  { src: '/bus2.jpeg', title: 'Taking PGL Season 4 Closer to the People' },
+  originalGallery[0],
+  bittuBossGallery[10],
+  originalGallery[1],
+  tajGallery[5],
+  bittuBossGallery[0],
+  originalGallery[2],
+  bittuBossGallery[1],
+  originalGallery[3],
+  bittuBossGallery[2],
+  originalGallery[4],
+];
+
+const row4Images = [
+  originalGallery[5],
+  bittuBossGallery[3],
+  tajGallery[6],
+  originalGallery[6],
+  bittuBossGallery[4],
+  originalGallery[7],
+  tajGallery[7],
+  bittuBossGallery[5],
+  originalGallery[8],
+  bittuBossGallery[6],
+  originalGallery[9],
+  bittuBossGallery[7],
+  originalGallery[10],
+];
+
 const InstagramIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -16,6 +124,7 @@ import VideoCarousel from '../sections/VideoCarousel'
 
 export default function Home() {
   const [videoModalSrc, setVideoModalSrc] = useState(null)
+  const [imageModalSrc, setImageModalSrc] = useState(null)
   const [formData, setFormData] = useState({ name: '', email: '', countryCode: '+91', phone: '', message: '' })
   const [status, setStatus] = useState('')
 
@@ -59,7 +168,7 @@ export default function Home() {
           <div className="hero-stats">
             <div><strong>2023</strong><span>Founded</span></div>
             <div><strong>50+</strong><span>Athletes</span></div>
-            <div><strong>100K+</strong><span>Fans rising</span></div>
+            <div><strong>Jio Hotstar</strong><span>Streaming Partner</span></div>
           </div>
         </div>
 
@@ -172,13 +281,12 @@ export default function Home() {
             <p className="kicker purple"><span></span> Our story so far</p>
             <h2>THE <em>JOURNEY</em></h2>
           </div>
-          <a className="text-button" href="#media">Explore our story <b>→</b></a>
         </div>
         <div className="timeline">
           <article>
             <span>2023</span>
             <h3>Franchise Founded</h3>
-            <p>A promise to bring Mumbai’s sporting spirit to a new stage.</p>
+            <p>Born from a vision to elevate Mumbai’s sporting spirit to a national stage, our journey officially began with Bhavesh Seth joining to spearhead our participation.</p>
           </article>
           <article>
             <span>2024</span>
@@ -253,10 +361,10 @@ export default function Home() {
         <p>Partner with a team built for visibility, community and the future of Indian sport.</p>
         <div className="sponsor-logos">
           <div className="sponsor-slot">
-            <img src="/AIC.png" alt="AIC" className="sponsor-img" />
+            <img src="/Shreeji.png" alt="Shreeji" className="sponsor-img" />
           </div>
           <div className="sponsor-slot">
-            <img src="/shreeji.jpeg" alt="Shreeji" className="sponsor-img" />
+            <img src="/AIC Logo.png" alt="AIC" className="sponsor-img" />
           </div>
         </div>
         <a className="button gold" href="#contact">Contact us <span>→</span></a>
@@ -270,21 +378,39 @@ export default function Home() {
           </div>
           <p>Moments made with the entire city behind us.</p>
         </div>
-        <div className="gallery-grid">
-          <img src="/team3.jpg" alt="Gallery" />
-          <img src="/gallery (3).JPG" alt="Gallery" />
-          <img src="/pyramid.JPG" alt="Gallery" />
-          <img src="/owners3.JPG" alt="Gallery" />
-          <img src="/PGL DAY 214750.jpg" alt="Gallery" />
-          <img src="/team.JPG" alt="Gallery" />
-          <img src="/pyramid2.JPG" alt="Gallery" />
-          <img src="/team huddle.JPG" alt="Gallery" />
-          <img src="/PGL DAY 214742.jpg" alt="Gallery" />
-          <img src="/gallery (2).jpg" alt="Gallery" />
-          <img src="/gallery 5.jpeg" alt="Gallery" />
-          <img src="/gallery 6.jpeg" alt="Gallery" />
-          <img src="/gallery 7.jpeg" alt="Gallery" />
-          <img src="/gallery 8.jpeg" alt="Gallery" />
+        <div className="film-strip-container">
+          <div className="film-strip-track">
+            {row1Images.concat(row1Images).map((item, index) => (
+              <figure key={`row1-${index}`} className="film-slide" onClick={() => setImageModalSrc(item.src)} style={{ cursor: 'pointer' }}>
+                <img src={item.src} alt={item.title} />
+                <figcaption className="film-caption">{item.title}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="film-strip-track reverse" style={{ animationDelay: '-15s' }}>
+            {row2Images.concat(row2Images).map((item, index) => (
+              <figure key={`row2-${index}`} className="film-slide" onClick={() => setImageModalSrc(item.src)} style={{ cursor: 'pointer' }}>
+                <img src={item.src} alt={item.title} />
+                <figcaption className="film-caption">{item.title}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="film-strip-track" style={{ animationDelay: '-30s' }}>
+            {row3Images.concat(row3Images).map((item, index) => (
+              <figure key={`row3-${index}`} className="film-slide" onClick={() => setImageModalSrc(item.src)} style={{ cursor: 'pointer' }}>
+                <img src={item.src} alt={item.title} />
+                <figcaption className="film-caption">{item.title}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="film-strip-track reverse" style={{ animationDelay: '-45s' }}>
+            {row4Images.concat(row4Images).map((item, index) => (
+              <figure key={`row4-${index}`} className="film-slide" onClick={() => setImageModalSrc(item.src)} style={{ cursor: 'pointer' }}>
+                <img src={item.src} alt={item.title} />
+                <figcaption className="film-caption">{item.title}</figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -338,6 +464,28 @@ export default function Home() {
               controls 
               autoPlay 
               style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
+
+      {imageModalSrc && (
+        <div 
+          style={{ position: 'fixed', inset: 0, zIndex: 100, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          onClick={() => setImageModalSrc(null)}
+        >
+          <div style={{ position: 'relative', width: '90%', maxWidth: '1000px', height: '90vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <button 
+              onClick={() => setImageModalSrc(null)}
+              style={{ position: 'absolute', top: '0', right: '0', background: 'transparent', border: 'none', color: '#fff', fontSize: '40px', cursor: 'pointer', zIndex: 101 }}
+            >
+              &times;
+            </button>
+            <img 
+              src={imageModalSrc} 
+              alt="Modal view"
+              style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', borderRadius: '8px' }} 
               onClick={(e) => e.stopPropagation()}
             />
           </div>
