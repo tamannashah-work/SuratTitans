@@ -67,9 +67,9 @@ export default function LeagueInfo() {
         <div className="heritage-grid">
           <div data-r="fade-up">
             <h3 style={{ font: '800 42px "Barlow Condensed"', color: '#fff', WebkitTextFillColor: '#fff', marginBottom: '10px' }}>Shri. Pratap Sarnaik</h3>
-            <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontSize: '11px', color: 'var(--violet)', marginBottom: '25px', fontWeight: 'bold' }}>Founder, Pro Govinda League</p>
+            <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontSize: '11px', color: 'var(--violet)', marginBottom: '25px', fontWeight: 'bold' }}>Co-Founder, Pro Govinda League</p>
             <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#ded3e8', marginBottom: '30px' }}>
-              A visionary sports enthusiast and established businessman, Pratap Sarnaik founded the Pro Govinda League to elevate the traditional Govinda Pathak culture into a nationally recognized sport. As a strong advocate for youth empowerment and cultural preservation, his leadership has transformed the league into a dynamic platform celebrating athletic excellence rooted in India’s rich legacy.
+              A visionary leader and sports enthusiast, Pratap Sarnaik co-founded the Pro Govinda League to elevate the traditional Govinda Pathak into a nationally recognized sport. His dedication to youth empowerment and cultural preservation has transformed the league into a dynamic platform for athletic excellence.
             </p>
           </div>
           <div data-r="fade-up" data-r-delay="1" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
