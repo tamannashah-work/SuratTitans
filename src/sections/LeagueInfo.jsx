@@ -14,8 +14,9 @@ export default function LeagueInfo() {
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '80px' }}>
-          <div data-r="scale" style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-            <img src="/popup-banner.webp" alt="Pro Govinda League Banner" style={{ width: '100%', maxWidth: '600px', height: 'auto', borderRadius: '16px', boxShadow: '0 25px 50px rgba(0,0,0,0.15)' }} />
+          <div data-r="scale" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', width: '100%', maxWidth: '800px', gap: '20px', padding: '0 20px' }}>
+            <img src="/streaming partner.jpeg" alt="Streaming Partner" style={{ width: '100%', height: '100%', aspectRatio: '1 / 1.1', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 25px 50px rgba(0,0,0,0.15)' }} />
+            <img src="/popup-banner.webp" alt="Pro Govinda League Banner" style={{ width: '100%', height: '100%', aspectRatio: '1 / 1.1', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 25px 50px rgba(0,0,0,0.15)' }} />
           </div>
         </div>
 
