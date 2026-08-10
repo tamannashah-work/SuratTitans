@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 const originalGallery = [
@@ -12,9 +12,9 @@ const originalGallery = [
   { src: '/team huddle.JPG', title: 'Pre-match Strategy' },
   { src: '/PGL DAY 214742.jpg', title: 'Govinda Spirit' },
   { src: '/gallery (2).jpg', title: 'Community Outreach' },
-  { src: '/gallery 5.jpeg', title: 'Suryakumar Yadav (SKY) - Brand Ambassador' },
+  { src: '/gallery 5.jpeg', title: 'The Team' },
   { src: '/gallery 6.jpeg', title: 'Victory Celebration' },
-  { src: '/gallery 7.jpeg', title: 'City Parade' },
+  { src: '/gallery 7.jpeg', title: 'Season Finale' },
   { src: '/gallery 8.jpeg', title: 'Season Finale' }
 ];
 
@@ -29,6 +29,8 @@ const bittuBossGallery = [
   { src: '/Bittu Boss Visit to Shreeji/7.jpeg', title: 'Bittu Boss Visit to Shreeji' },
   { src: '/Bittu Boss Visit to Shreeji/8.jpeg', title: 'Bittu Boss Visit to Shreeji' },
   { src: '/Bittu Boss Visit to Shreeji/9.jpeg', title: 'Bittu Boss Visit to Shreeji' },
+  { src: '/gallery (2).jpg', title: '2026 Season' },
+  { src: '/gallery (3).JPG', title: '2026 Season' },
   { src: '/Bittu Boss Visit to Shreeji/WhatsApp Image 2026-08-09 at 4.55.13 PM.jpeg', title: 'Bittu Boss Visit to Shreeji' }
 ];
 
@@ -43,71 +45,46 @@ const tajGallery = [
   { src: '/Taj Falaknuma/DSC08525.JPG', title: 'Taj Falaknuma Event 2026' }
 ];
 
-const row1Images = [
-  originalGallery[0],
-  bittuBossGallery[0],
+const gallery2026 = [
   tajGallery[0],
-  { src: '/bus1.jpeg', title: 'PGL Branded Buses Hit the Roads!' },
-  originalGallery[1],
-  bittuBossGallery[1],
-  originalGallery[2],
-  bittuBossGallery[2],
-  tajGallery[1],
-  originalGallery[3],
-  bittuBossGallery[3],
-  originalGallery[4],
-  bittuBossGallery[4],
-  originalGallery[5],
-  bittuBossGallery[5],
-];
-
-const row2Images = [
-  originalGallery[6],
-  bittuBossGallery[6],
-  tajGallery[2],
-  originalGallery[7],
-  originalGallery[8],
-  bittuBossGallery[7],
-  tajGallery[3],
-  originalGallery[9],
-  originalGallery[10],
-  bittuBossGallery[8],
-  originalGallery[11],
-  originalGallery[12],
-];
-
-const row3Images = [
-  originalGallery[13],
-  bittuBossGallery[9],
-  tajGallery[4],
-  { src: '/bus2.jpeg', title: 'Taking PGL Season 4 Closer to the People' },
-  originalGallery[0],
-  bittuBossGallery[10],
-  originalGallery[1],
-  tajGallery[5],
   bittuBossGallery[0],
-  originalGallery[2],
+  { src: '/2026/snapsave-app_3880082030319205049_60939500623.mp4', title: '2026 Season Video' },
+  tajGallery[1],
   bittuBossGallery[1],
-  originalGallery[3],
+  { src: '/bus1.jpeg', title: 'PGL Branded Buses Hit the Roads!' },
+  tajGallery[2],
   bittuBossGallery[2],
-  originalGallery[4],
+  { src: '/2026/snapsave-app_3929373313324925049_60939500623.mp4', title: '2026 Season Video' },
+  tajGallery[3],
+  bittuBossGallery[3],
+  { src: '/bus2.jpeg', title: 'Taking PGL Season 4 Closer to the People' },
+  tajGallery[4],
+  bittuBossGallery[4],
+  { src: '/2026/snapsave-app_3929400936205864871_60939500623.mp4', title: '2026 Season Video' },
+  tajGallery[5],
+  bittuBossGallery[5],
+  { src: '/2026/snapsave-app_3930892286841857047_60939500623 (1).jpg', title: '2026 Season' },
+  tajGallery[6],
+  bittuBossGallery[6],
+  { src: '/2026/snapsave-app_3930892286841857047_60939500623.jpg', title: '2026 Season' },
+  tajGallery[7],
+  bittuBossGallery[7],
+  { src: '/2026/snapsave-app_3930892287563310787_60939500623.jpg', title: '2026 Season' },
+  bittuBossGallery[8],
+  bittuBossGallery[9],
+  bittuBossGallery[10],
+  bittuBossGallery[11],
+  bittuBossGallery[12],
+  originalGallery[1], // 2026 Taj Falaknuma Event
+  originalGallery[5], // The Squad 2026
 ];
 
-const row4Images = [
-  originalGallery[5],
-  bittuBossGallery[3],
-  tajGallery[6],
-  originalGallery[6],
-  bittuBossGallery[4],
-  originalGallery[7],
-  tajGallery[7],
-  bittuBossGallery[5],
-  originalGallery[8],
-  bittuBossGallery[6],
-  originalGallery[9],
-  bittuBossGallery[7],
-  originalGallery[10],
-];
+const row1Images2026 = gallery2026.slice(0, Math.ceil(gallery2026.length / 2));
+const row2Images2026 = gallery2026.slice(Math.ceil(gallery2026.length / 2));
+
+const pastMoments = originalGallery.filter((_, i) => i !== 1 && i !== 5 && i !== 9);
+const row1ImagesPast = pastMoments.slice(0, Math.ceil(pastMoments.length / 2));
+const row2ImagesPast = pastMoments.slice(Math.ceil(pastMoments.length / 2));
 
 const InstagramIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -121,6 +98,96 @@ import LeagueInfo from '../sections/LeagueInfo'
 import YouthCommunity from '../sections/YouthCommunity'
 import ReelCarousel from '../sections/ReelCarousel'
 import VideoCarousel from '../sections/VideoCarousel'
+
+const AutoScrollStrip = ({ items, reverse = false, speed = 1, onImageClick, onVideoClick }) => {
+  const containerRef = useRef(null);
+  const isHovered = useRef(false);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeftStart = useRef(0);
+
+  useEffect(() => {
+    let animationFrameId;
+    const scroll = () => {
+      if (containerRef.current && !isHovered.current && !isDragging.current) {
+        containerRef.current.scrollLeft += reverse ? -speed : speed;
+        
+        const { scrollLeft, scrollWidth } = containerRef.current;
+        const halfWidth = scrollWidth / 2;
+
+        if (!reverse && scrollLeft >= halfWidth) {
+           containerRef.current.scrollLeft -= halfWidth;
+        } else if (reverse && scrollLeft <= 0) {
+           containerRef.current.scrollLeft += halfWidth;
+        }
+      }
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+    animationFrameId = requestAnimationFrame(scroll);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [speed, reverse]);
+
+  const handleMouseDown = (e) => {
+    isDragging.current = true;
+    startX.current = e.pageX - containerRef.current.offsetLeft;
+    scrollLeftStart.current = containerRef.current.scrollLeft;
+  };
+
+  const handleMouseLeave = () => {
+    isDragging.current = false;
+    isHovered.current = false;
+  };
+
+  const handleMouseUp = () => {
+    isDragging.current = false;
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging.current) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX.current) * 1.5; 
+    let newScrollLeft = scrollLeftStart.current - walk;
+    const halfWidth = containerRef.current.scrollWidth / 2;
+    
+    if (newScrollLeft < 0) {
+       newScrollLeft += halfWidth;
+       scrollLeftStart.current += halfWidth;
+    } else if (newScrollLeft >= halfWidth) {
+       newScrollLeft -= halfWidth;
+       scrollLeftStart.current -= halfWidth;
+    }
+    containerRef.current.scrollLeft = newScrollLeft;
+  };
+
+  return (
+    <div 
+      className="film-strip-container" 
+      style={{ padding: '10px 0', cursor: 'grab' }}
+      ref={containerRef}
+      onMouseEnter={() => isHovered.current = true}
+      onMouseLeave={handleMouseLeave}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseMove={handleMouseMove}
+      onTouchStart={() => isHovered.current = true}
+      onTouchEnd={() => isHovered.current = false}
+    >
+      <div className="film-strip-track" style={{ animation: 'none' }}>
+        {items.concat(items).map((item, index) => (
+          <figure key={`item-${index}`} className="film-slide" onClick={() => item.src.endsWith('.mp4') ? onVideoClick(item.src) : onImageClick(item.src)} style={{ cursor: 'pointer', userSelect: 'none' }}>
+            {item.src.endsWith('.mp4') ? (
+               <video src={item.src} autoPlay loop muted playsInline style={{ width: '100%', height: '100%', objectFit: 'cover', pointerEvents: 'none' }} />
+            ) : (
+               <img src={item.src} alt={item.title} draggable="false" style={{ pointerEvents: 'none' }} />
+            )}
+            <figcaption className="film-caption" style={{ pointerEvents: 'none' }}>{item.title}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default function Home() {
   const [videoModalSrc, setVideoModalSrc] = useState(null)
@@ -163,7 +230,7 @@ export default function Home() {
           <p className="hero-text">A new era of tradition. A global dream. Built on the courage and spirit of Mumbai.</p>
           <div className="actions">
             <a className="button gold" href="#team">Meet the team <span>→</span></a>
-            <button className="watch" onClick={() => setVideoModalSrc('/videos/practice session.mp4')} style={{ background: 'transparent', border: 'none', cursor: 'pointer', outline: 'none' }}><b>▶</b> Watch highlights</button>
+            <button className="watch" onClick={() => setVideoModalSrc('/videos/jiohotstar.mp4')} style={{ background: 'transparent', border: 'none', cursor: 'pointer', outline: 'none' }}><b>▶</b> Watch highlights</button>
           </div>
           <div className="hero-stats">
             <div><strong>2023</strong><span>Founded</span></div>
@@ -242,7 +309,7 @@ export default function Home() {
         <div className="owners-layout">
           <div data-r="fade-up">
             <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#554d59', marginBottom: '40px' }}>
-              Four visions. One unwavering belief in the potential of our team, our sport and our city.
+              Four visions. One unwavering belief in the potential of our team, our sport and our city Mumbai.
             </p>
             <Link className="button gold" to="/co-owners">Meet All Co-Owners <span>→</span></Link>
           </div>
@@ -361,10 +428,10 @@ export default function Home() {
         <p>Partner with a team built for visibility, community and the future of Indian sport.</p>
         <div className="sponsor-logos">
           <div className="sponsor-slot">
-            <img src="/Shreeji.png" alt="Shreeji" className="sponsor-img" />
+            <img src="/Shreeji.png" alt="Shreeji" className="sponsor-img" style={{ transform: 'scale(1.5)' }} />
           </div>
           <div className="sponsor-slot">
-            <img src="/AIC Logo.png" alt="AIC" className="sponsor-img" />
+            <img src="/AIC Logo.png" alt="AIC" className="sponsor-img" style={{ transform: 'scale(1.2)' }} />
           </div>
         </div>
         <a className="button gold" href="#contact">Contact us <span>→</span></a>
@@ -378,40 +445,14 @@ export default function Home() {
           </div>
           <p>Moments made with the entire city behind us.</p>
         </div>
-        <div className="film-strip-container">
-          <div className="film-strip-track">
-            {row1Images.concat(row1Images).map((item, index) => (
-              <figure key={`row1-${index}`} className="film-slide" onClick={() => setImageModalSrc(item.src)} style={{ cursor: 'pointer' }}>
-                <img src={item.src} alt={item.title} />
-                <figcaption className="film-caption">{item.title}</figcaption>
-              </figure>
-            ))}
-          </div>
-          <div className="film-strip-track reverse" style={{ animationDelay: '-15s' }}>
-            {row2Images.concat(row2Images).map((item, index) => (
-              <figure key={`row2-${index}`} className="film-slide" onClick={() => setImageModalSrc(item.src)} style={{ cursor: 'pointer' }}>
-                <img src={item.src} alt={item.title} />
-                <figcaption className="film-caption">{item.title}</figcaption>
-              </figure>
-            ))}
-          </div>
-          <div className="film-strip-track" style={{ animationDelay: '-30s' }}>
-            {row3Images.concat(row3Images).map((item, index) => (
-              <figure key={`row3-${index}`} className="film-slide" onClick={() => setImageModalSrc(item.src)} style={{ cursor: 'pointer' }}>
-                <img src={item.src} alt={item.title} />
-                <figcaption className="film-caption">{item.title}</figcaption>
-              </figure>
-            ))}
-          </div>
-          <div className="film-strip-track reverse" style={{ animationDelay: '-45s' }}>
-            {row4Images.concat(row4Images).map((item, index) => (
-              <figure key={`row4-${index}`} className="film-slide" onClick={() => setImageModalSrc(item.src)} style={{ cursor: 'pointer' }}>
-                <img src={item.src} alt={item.title} />
-                <figcaption className="film-caption">{item.title}</figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
+        
+        <h3 style={{ font: '800 32px "Barlow Condensed"', color: 'var(--purple)', margin: '20px 0 0' }}>2026 SEASON</h3>
+        <AutoScrollStrip items={row1Images2026} speed={0.8} onImageClick={setImageModalSrc} onVideoClick={setVideoModalSrc} />
+        <AutoScrollStrip items={row2Images2026} reverse={true} speed={0.8} onImageClick={setImageModalSrc} onVideoClick={setVideoModalSrc} />
+
+        <h3 style={{ font: '800 32px "Barlow Condensed"', color: 'var(--purple)', margin: '60px 0 0' }}>PAST MOMENTS</h3>
+        <AutoScrollStrip items={row1ImagesPast} speed={0.8} onImageClick={setImageModalSrc} onVideoClick={setVideoModalSrc} />
+        <AutoScrollStrip items={row2ImagesPast} reverse={true} speed={0.8} onImageClick={setImageModalSrc} onVideoClick={setVideoModalSrc} />
       </section>
 
       <section className="contact" id="contact">

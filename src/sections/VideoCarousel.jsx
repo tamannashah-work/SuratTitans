@@ -2,13 +2,22 @@ import React from 'react';
 
 export default function VideoCarousel() {
   const videos = [
+    { id: 7, type: 'video', src: '/2026/snapsave-app_3880082030319205049_60939500623.mp4' },
     { id: 'falalnuma', type: 'video', src: '/videos/falalnuma reel.mp4' },
+    { id: 8, type: 'video', src: '/2026/snapsave-app_3929373313324925049_60939500623.mp4' },
     { id: 6, type: 'video', src: '/videos/jiohotstar.mp4' },
+    { id: 9, type: 'video', src: '/2026/snapsave-app_3929400936205864871_60939500623.mp4' },
     { id: 1, type: 'video', src: '/videos/practice session.mp4' },
+    { id: 10, type: 'video', src: '/2026/snapsave-app_3930892287152273378_60939500623.mp4' },
     { id: 5, type: 'video', src: '/videos/IMG_5856.mp4' },
+    { id: 11, type: 'video', src: '/2026/snapsave-app_3930892287613649724_60939500623.mp4' },
     { id: 2, type: 'video', src: '/videos/C7056.mp4' },
-    { id: 3, type: 'video', src: '/videos/C7057.mp4' },
-    { id: 4, type: 'video', src: '/videos/C7060.mp4' }
+    { id: 12, type: 'video', src: '/2026/snapsave-app_3937236853394529355_60939500623.mp4' },
+    { id: 13, type: 'video', src: '/2026/snapsave-app_3945244251909396901_5490820387.mp4' },
+    { id: 4, type: 'video', src: '/videos/C7060.mp4' },
+    { id: 14, type: 'video', src: '/2026/snapsave-app_3945321144185817226_60939500623.mp4' },
+    { id: 15, type: 'video', src: '/2026/snapsave-app_3946242518171618049_60939500623.mp4' },
+    { id: 16, type: 'video', src: '/2026/snapsave-app_3958439903236374297_60939500623.mp4' }
   ];
 
   return (

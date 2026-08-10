@@ -39,7 +39,7 @@ export default function LeagueInfo() {
         </div>
       </section>
 
-      <section className="section" style={{ background: '#13061f', color: '#fff' }}>
+      <section className="section" style={{ background: 'var(--black)', color: '#fff' }}>
         <div className="section-head" data-r="fade-up" style={{ textAlign: 'center', margin: '0 auto 60px' }}>
           <p className="kicker" style={{ justifyContent: 'center', color: 'var(--purple)' }}><span></span> The Heritage</p>
           <h2 style={{ color: '#fff', margin: '10px 0', WebkitTextFillColor: '#fff' }}>PRO GOVINDA <em>LEAGUE</em></h2>
@@ -98,9 +98,9 @@ export default function LeagueInfo() {
         <div className="heritage-grid" style={{ marginTop: '60px' }}>
           <div data-r="fade-up">
             <h3 style={{ font: '800 42px "Barlow Condensed"', color: '#fff', WebkitTextFillColor: '#fff', marginBottom: '10px' }}>Suryakumar Yadav (SKY)</h3>
-            <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontSize: '11px', color: 'var(--violet)', marginBottom: '25px', fontWeight: 'bold' }}>Brand Ambassador, Pro Govinda League</p>
+            <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontSize: '11px', color: 'var(--violet)', marginBottom: '25px', fontWeight: 'bold' }}>Brand Ambassador, Pro Govinda League Season 4</p>
             <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#ded3e8', marginBottom: '20px' }}>
-              We are thrilled to welcome Indian cricket superstar Suryakumar Yadav as the official Brand Ambassador for the Pro Govinda League! Known for his fearless approach and unmatched energy, SKY embodies the spirit and passion of the Govindas.
+              We are thrilled to welcome Indian cricket superstar Suryakumar Yadav as the official Brand Ambassador for the Pro Govinda League this year for Season 4! Known for his fearless approach and unmatched energy, SKY embodies the spirit and passion of the Govindas.
             </p>
             <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#ded3e8', marginBottom: '20px' }}>
               With SKY joining the family, the league is set to reach new heights and inspire millions of young athletes across the nation.
