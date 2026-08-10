@@ -45,6 +45,34 @@ const tajGallery = [
   { src: '/Taj Falaknuma/DSC08525.JPG', title: 'Taj Falaknuma Event 2026' }
 ];
 
+const bittuBossVisit2026Gallery = [
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.23 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.23 PM (2).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.23 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.24 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.24 PM (2).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.24 PM (3).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.24 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.25 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.25 PM (2).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.25 PM (3).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.25 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.26 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.26 PM (2).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.26 PM (3).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.26 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.27 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.27 PM (2).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.27 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.28 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.28 PM (2).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.28 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.29 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.29 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Video 2026-08-10 at 10.58.38 PM.mp4', title: 'Bittu Boss Visits the Titans' },
+  { src: '/bittu boss visit Surat Titans Team/WhatsApp Video 2026-08-10 at 10.58.48 PM.mp4', title: 'Bittu Boss Visits the Titans' }
+];
+
 const gallery2026 = [
   tajGallery[0],
   bittuBossGallery[0],
@@ -79,8 +107,26 @@ const gallery2026 = [
   originalGallery[5], // The Squad 2026
 ];
 
-const row1Images2026 = gallery2026.slice(0, Math.ceil(gallery2026.length / 2));
-const row2Images2026 = gallery2026.slice(Math.ceil(gallery2026.length / 2));
+const row1Images2026 = [];
+const row2Images2026 = [];
+const row3Images2026 = [];
+
+const all2026ImagesRaw = [...gallery2026, ...bittuBossVisit2026Gallery];
+const seenSrcs = new Set();
+const all2026Images = [];
+
+all2026ImagesRaw.forEach(item => {
+  if (!seenSrcs.has(item.src)) {
+    seenSrcs.add(item.src);
+    all2026Images.push(item);
+  }
+});
+
+all2026Images.forEach((item, index) => {
+  if (index % 3 === 0) row1Images2026.push(item);
+  else if (index % 3 === 1) row2Images2026.push(item);
+  else row3Images2026.push(item);
+});
 
 const pastMoments = originalGallery.filter((_, i) => i !== 1 && i !== 5 && i !== 9);
 const row1ImagesPast = pastMoments.slice(0, Math.ceil(pastMoments.length / 2));
@@ -449,6 +495,8 @@ export default function Home() {
         <h3 style={{ font: '800 32px "Barlow Condensed"', color: 'var(--purple)', margin: '20px 0 0' }}>2026 SEASON</h3>
         <AutoScrollStrip items={row1Images2026} speed={0.8} onImageClick={setImageModalSrc} onVideoClick={setVideoModalSrc} />
         <AutoScrollStrip items={row2Images2026} reverse={true} speed={0.8} onImageClick={setImageModalSrc} onVideoClick={setVideoModalSrc} />
+        <AutoScrollStrip items={row3Images2026} speed={0.8} onImageClick={setImageModalSrc} onVideoClick={setVideoModalSrc} />
+
 
         <h3 style={{ font: '800 32px "Barlow Condensed"', color: 'var(--purple)', margin: '60px 0 0' }}>PAST MOMENTS</h3>
         <AutoScrollStrip items={row1ImagesPast} speed={0.8} onImageClick={setImageModalSrc} onVideoClick={setVideoModalSrc} />

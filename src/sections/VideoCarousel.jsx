@@ -2,6 +2,8 @@ import React from 'react';
 
 export default function VideoCarousel() {
   const videos = [
+    { id: 'bbv1', type: 'video', src: '/bittu boss visit Surat Titans Team/WhatsApp Video 2026-08-10 at 10.58.38 PM.mp4' },
+    { id: 'bbv2', type: 'video', src: '/bittu boss visit Surat Titans Team/WhatsApp Video 2026-08-10 at 10.58.48 PM.mp4' },
     { id: 7, type: 'video', src: '/2026/snapsave-app_3880082030319205049_60939500623.mp4' },
     { id: 'falalnuma', type: 'video', src: '/videos/falalnuma reel.mp4' },
     { id: 8, type: 'video', src: '/2026/snapsave-app_3929373313324925049_60939500623.mp4' },
