@@ -325,7 +325,7 @@ export default function Home() {
       <section className="vision" id="vision">
         <div className="vision-grid"></div>
         <p className="kicker"><span></span> Our vision</p>
-        <blockquote>“To honour our traditional sport, nurture exceptional talent and take Surat Titans to the world stage—with the ultimate dream of global and National recognition.”</blockquote>
+        <blockquote>“To honour our traditional sport, nurture exceptional talent and take Surat Titans to the world stage, with the dream of National recognition.”</blockquote>
 
       </section>
 

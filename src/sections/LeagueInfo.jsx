@@ -33,7 +33,7 @@ export default function LeagueInfo() {
             </ul>
           </div>
           <div style={{ background: 'rgba(255,255,255,0.95)', padding: '40px', borderRadius: '8px', color: '#17101d', backdropFilter: 'blur(10px)' }}>
-            <p style={{ font: '700 18px "Barlow Condensed"', lineHeight: '1.5', marginBottom: '20px' }}>Human pyramids reaching 5 to 8 levels high, built by teams of 200 elite athletes. Every climb demands timing, balance, raw strength, lightning-fast reflexes, and absolute trust in teammates.</p>
+            <p style={{ font: '700 18px "Barlow Condensed"', lineHeight: '1.5', marginBottom: '20px' }}>Human pyramids reaching 5 to 8 levels high, built by teams of more than 100 elite athletes. Every climb demands timing, balance, raw strength, lightning-fast reflexes, and absolute trust in teammates.</p>
             <p style={{ font: '700 18px "Barlow Condensed"', lineHeight: '1.5', color: 'var(--violet)' }}>The crowd holds its breath. The top athlete reaches for the handi. The entire stadium erupts.</p>
           </div>
         </div>
