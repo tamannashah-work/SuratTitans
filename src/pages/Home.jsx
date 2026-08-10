@@ -46,30 +46,13 @@ const tajGallery = [
 ];
 
 const bittuBossVisit2026Gallery = [
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.23 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.23 PM (2).jpeg', title: 'Bittu Boss Visits the Titans' },
   { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.23 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.24 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.24 PM (2).jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.24 PM (3).jpeg', title: 'Bittu Boss Visits the Titans' },
   { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.24 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
   { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.25 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.25 PM (2).jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.25 PM (3).jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.25 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.26 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.26 PM (2).jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.26 PM (3).jpeg', title: 'Bittu Boss Visits the Titans' },
   { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.26 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.27 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.27 PM (2).jpeg', title: 'Bittu Boss Visits the Titans' },
   { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.27 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.28 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.28 PM (2).jpeg', title: 'Bittu Boss Visits the Titans' },
   { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.28 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.29 PM (1).jpeg', title: 'Bittu Boss Visits the Titans' },
   { src: '/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.29 PM.jpeg', title: 'Bittu Boss Visits the Titans' },
-  { src: '/bittu boss visit Surat Titans Team/WhatsApp Video 2026-08-10 at 10.58.38 PM.mp4', title: 'Bittu Boss Visits the Titans' },
   { src: '/bittu boss visit Surat Titans Team/WhatsApp Video 2026-08-10 at 10.58.48 PM.mp4', title: 'Bittu Boss Visits the Titans' }
 ];
 
@@ -91,7 +74,6 @@ const gallery2026 = [
   { src: '/2026/snapsave-app_3929400936205864871_60939500623.mp4', title: '2026 Season Video' },
   tajGallery[5],
   bittuBossGallery[5],
-  { src: '/2026/snapsave-app_3930892286841857047_60939500623 (1).jpg', title: '2026 Season' },
   tajGallery[6],
   bittuBossGallery[6],
   { src: '/2026/snapsave-app_3930892286841857047_60939500623.jpg', title: '2026 Season' },
@@ -121,6 +103,12 @@ all2026ImagesRaw.forEach(item => {
     all2026Images.push(item);
   }
 });
+
+// Shuffle the images so they are distributed well across the strips
+for (let i = all2026Images.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [all2026Images[i], all2026Images[j]] = [all2026Images[j], all2026Images[i]];
+}
 
 all2026Images.forEach((item, index) => {
   if (index % 3 === 0) row1Images2026.push(item);
