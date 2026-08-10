@@ -491,7 +491,7 @@ export default function Home() {
         <div>
           <p className="kicker"><span></span> Get in touch</p>
           <h2>LET’S BUILD<br />A <em>LEGACY.</em></h2>
-          <p>For partnership, media or general enquiries, our team would love to hear from you. Interested in becoming a sponsor? Reach out to us below.</p>
+          <p>For partnership, media or general enquiries, our team would love to hear from you. Interested in becoming a sponsor? Reach out to us with this form or mail us on <a href="mailto:info@surattitans.com" style={{ color: 'gray' }}>info@surattitans.com</a>.</p>
         </div>
         <form onSubmit={handleSubmit} style={{ padding: '30px' }}>
           {status === 'success' ? (
