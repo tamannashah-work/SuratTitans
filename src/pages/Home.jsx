@@ -409,12 +409,12 @@ export default function Home() {
           <article>
             <span>2025</span>
             <h3>Team Selection</h3>
-            <p>Acquired the Sairam Phatak Govindas to represent us through an official auction process.</p>
+            <p>Acquired the Sairam Phatak Govindas via official auction.</p>
           </article>
           <article>
             <span>2026</span>
-            <h3>Legacy Continues</h3>
-            <p>Continuing the journey with our stellar squad for the upcoming season.</p>
+            <h3>Season 4</h3>
+            <p>Bigger. Stronger. Ready to Rise.</p>
           </article>
         </div>
       </section>
