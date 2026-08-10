@@ -35,7 +35,7 @@ export default function CoOwners() {
           <p className="kicker purple" style={{ justifyContent: 'center' }}><span></span> The visionary leaders</p>
           <h1 style={{ fontSize: '74px', color: 'var(--purple)', margin: '10px 0' }}>OUR <em>VISION</em></h1>
           <p style={{ margin: '0 auto', maxWidth: '600px', color: '#554d59', fontSize: '15px' }}>
-            Four leaders united by a single vision: to elevate the sporting culture of Surat and put our athletes on the global map.
+            Four leaders united by a single vision: to elevate the sporting culture of Mumbai and put our athletes on the global map.
           </p>
         </div>
 
