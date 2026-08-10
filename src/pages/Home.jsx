@@ -474,7 +474,7 @@ export default function Home() {
             <p className="kicker purple"><span></span> On and off the field</p>
             <h2>TITANS <em>GALLERY</em></h2>
           </div>
-          <p>Moments made with the entire city behind us.</p>
+          <p>Moments made with the league.</p>
         </div>
         
         <h3 style={{ font: '800 32px "Barlow Condensed"', color: 'var(--purple)', margin: '20px 0 0' }}>2026 SEASON</h3>
