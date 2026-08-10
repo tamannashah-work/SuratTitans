@@ -268,7 +268,7 @@ export default function Home() {
           </div>
           <div className="hero-stats">
             <div><strong>2023</strong><span>Founded</span></div>
-            <div><strong>50+</strong><span>Athletes</span></div>
+            <div><strong>100+</strong><span>Athletes</span></div>
             <div><strong>Jio Hotstar</strong><span>Streaming Partner</span></div>
           </div>
         </div>
