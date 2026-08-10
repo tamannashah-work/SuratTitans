@@ -325,11 +325,7 @@ export default function Home() {
         <div className="vision-grid"></div>
         <p className="kicker"><span></span> Our vision</p>
         <blockquote>“To honour our traditional sport, nurture exceptional talent and take Surat Titans to the world stage—with the ultimate dream of global and National recognition.”</blockquote>
-        <div className="vision-numbers">
-          <div><strong>100+</strong><span>Training sessions</span></div>
-          <div><strong>12+</strong><span>Matches played</span></div>
-          <div><strong>8+</strong><span>Wins together</span></div>
-        </div>
+
       </section>
 
       <section className="owners section">
