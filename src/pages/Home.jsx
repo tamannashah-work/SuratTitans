@@ -411,6 +411,7 @@ export default function Home() {
           <div>
             <p className="kicker purple"><span></span> News & media</p>
             <h2>THE TITANS <em>REPORT</em></h2>
+          </div>
         </div>
         <div className="news-grid">
           <article className="news-card" data-r="fade-up" style={{ position: 'relative', overflow: 'hidden', padding: 0, minHeight: '400px' }}>
