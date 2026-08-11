@@ -363,12 +363,12 @@ export default function Home() {
           <p>Meet the athletes who turn trust, timing and tenacity into something extraordinary.</p>
           <a className="button gold" href="#contact">Join the Titans <span>→</span></a>
         </div>
-        <div className="team-cards" style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+        <div className="team-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', alignItems: 'start' }}>
           <article className="athlete captain" data-r="scale" style={{ height: 'auto', padding: 0, background: 'transparent', overflow: 'hidden' }}>
-            <img src="/team photo.jpeg" alt="Team Photo 1" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '12px' }} />
+            <img src="/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.24 PM (1).jpeg" alt="Team Photo 1" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '12px' }} />
           </article>
           <article className="athlete" data-r="scale" data-r-delay="1" style={{ height: 'auto', padding: 0, background: 'transparent', overflow: 'hidden' }}>
-            <img src="/gallery 4.jpeg" alt="Team Photo 2" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '12px' }} />
+            <img src="/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.26 PM (3).jpeg" alt="Team Photo 2" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '12px' }} />
           </article>
         </div>
       </section>

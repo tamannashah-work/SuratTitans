@@ -39,8 +39,8 @@ export default function LeagueInfo() {
         </div>
       </section>
 
-      <section className="section" style={{ background: 'var(--black)', color: '#fff' }}>
-        <div className="section-head" data-r="fade-up" style={{ textAlign: 'center', margin: '0 auto 60px' }}>
+      <section className="section" style={{ background: 'var(--black)', color: '#fff', paddingBottom: '100px' }}>
+        <div className="section-head" data-r="fade-up" style={{ textAlign: 'center', margin: '0 auto 80px' }}>
           <p className="kicker" style={{ justifyContent: 'center', color: 'var(--purple)' }}><span></span> The Heritage</p>
           <h2 style={{ color: '#fff', margin: '10px 0', WebkitTextFillColor: '#fff' }}>PRO GOVINDA <em>LEAGUE</em></h2>
           <p style={{ margin: '0 auto', maxWidth: '750px', color: '#c4b8c9', fontSize: '15px', lineHeight: '1.8' }}>
@@ -65,75 +65,147 @@ export default function LeagueInfo() {
           </a>
         </div>
 
-        <div className="heritage-grid">
-          <div data-r="fade-up">
-            <h3 style={{ font: '800 42px "Barlow Condensed"', color: '#fff', WebkitTextFillColor: '#fff', marginBottom: '10px' }}>Shri. Pratap Sarnaik</h3>
-            <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontSize: '11px', color: 'var(--violet)', marginBottom: '25px', fontWeight: 'bold' }}>Founder, Pro Govinda League</p>
-            <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#ded3e8', marginBottom: '30px' }}>
-              A visionary leader and sports enthusiast, Pratap Sarnaik founded the Pro Govinda League to elevate the traditional Govinda Pathak into a nationally recognized sport. His dedication to youth empowerment and cultural preservation has transformed the league into a dynamic platform for athletic excellence.
-            </p>
-          </div>
-          <div data-r="fade-up" data-r-delay="1" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-             <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', maxWidth: '280px', width: '100%' }}>
-                <img src="/Pratap Sarnaik.webp" alt="Pratap Sarnaik" style={{ width: '100%', height: 'auto', display: 'block' }} />
-             </div>
-          </div>
-        </div>
+        {/* People cards — alternating layout */}
+        {[
+          {
+            num: '01',
+            name: 'Shri. Pratap Sarnaik',
+            role: 'Founder, Pro Govinda League',
+            bio: 'A visionary leader and sports enthusiast, Pratap Sarnaik founded the Pro Govinda League to elevate the traditional Govinda Pathak into a nationally recognized sport. His dedication to youth empowerment and cultural preservation has transformed the league into a dynamic platform for athletic excellence.',
+            img: '/Pratap Sarnaik.webp',
+            imgFit: 'cover',
+            imgBg: 'transparent',
+            reverse: false,
+          },
+          {
+            num: '02',
+            name: 'Shri. Purvesh Pratap Sarnaik',
+            role: 'President, Pro Govinda League',
+            bio: 'Purvesh Sarnaik brings a fresh, athlete-centric vision to the Pro Govinda League, championing franchise development and nationwide talent scouting. His strategic leadership is transforming this traditional sport into a structured national event.',
+            img: '/Purvesh.JPG',
+            imgFit: 'cover',
+            imgBg: 'transparent',
+            reverse: true,
+          },
+          {
+            num: '03',
+            name: 'Suryakumar Yadav',
+            role: 'Brand Ambassador · Season 4',
+            bio: 'We are thrilled to welcome Indian cricket superstar Suryakumar Yadav as the official Brand Ambassador for the Pro Govinda League Season 4! Known for his fearless approach and unmatched energy, SKY embodies the spirit and passion of the Govindas. With SKY joining the family, the league is set to reach new heights and inspire millions of young athletes across the nation.',
+            img: '/suryakumar yadav.jpeg',
+            img2: '/sky.jpeg',
+            imgFit: 'cover',
+            imgBg: 'transparent',
+            reverse: false,
+          },
+          {
+            num: '04',
+            name: 'Bittu Boss',
+            role: 'Official Mascot, Pro Govinda League',
+            bio: 'Meet Bittu Boss, the official mascot of the Pro Govinda League! He kicked off his city-wide promotional journey after seeking blessings at Shri Siddhivinayak Mandir, Mumbai. Bittu Boss is now traveling across the city, meeting fans and Govindas to spread the excitement for Season 4.',
+            img: '/bittu boss.jpeg',
+            imgFit: 'cover',
+            imgBg: '#fff',
+            reverse: true,
+          },
+        ].map(({ num, name, role, bio, img, img2, imgFit, imgBg, reverse }, i) => (
+          <div
+            key={i}
+            data-r="fade-up"
+            style={{
+              display: 'flex',
+              flexDirection: reverse ? 'row-reverse' : 'row',
+              alignItems: 'center',
+              gap: '40px',
+              maxWidth: '1100px',
+              margin: i === 0 ? '0 auto' : '40px auto 0',
+              padding: '0 20px',
+              borderRadius: '20px',
+              background: 'transparent',
+              boxSizing: 'border-box',
+              flexWrap: 'wrap',
+            }}
+          >
+            {/* Photo column */}
+            <div style={{ flex: '0 0 auto', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
+              <div style={{
+                position: 'relative',
+                width: '260px',
+                height: '320px',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                border: '1px solid rgba(255,255,255,0.15)', // Lighter border on dark bg
+                boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+                background: imgBg,
+                flexShrink: 0,
+              }}>
+                <img
+                  src={img}
+                  alt={name}
+                  style={{ width: '100%', height: '100%', objectFit: imgFit, objectPosition: 'top', display: 'block' }}
+                />
+              </div>
+              
+              {img2 && (
+                <div style={{
+                  position: 'relative',
+                  width: '260px',
+                  height: '320px',
+                  borderRadius: '16px',
+                  overflow: 'hidden',
+                  border: '1px solid rgba(255,255,255,0.15)',
+                  boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+                  background: imgBg,
+                  flexShrink: 0,
+                }}>
+                  <img
+                    src={img2}
+                    alt={`${name} secondary`}
+                    style={{ width: '100%', height: '100%', objectFit: imgFit, objectPosition: 'top', display: 'block' }}
+                  />
+                </div>
+              )}
+            </div>
 
-        <div className="heritage-grid reverse" style={{ marginTop: '60px' }}>
-          <div data-r="fade-up">
-            <h3 style={{ font: '800 42px "Barlow Condensed"', color: '#fff', WebkitTextFillColor: '#fff', marginBottom: '10px' }}>Shri. Purvesh Pratap Sarnaik</h3>
-            <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontSize: '11px', color: 'var(--violet)', marginBottom: '25px', fontWeight: 'bold' }}>President, Pro Govinda League</p>
-            <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#ded3e8', marginBottom: '30px' }}>
-              Purvesh Sarnaik brings a fresh, athlete-centric vision to the Pro Govinda League, championing franchise development and nationwide talent scouting. His strategic leadership is transforming this traditional sport into a structured national event.
-            </p>
-          </div>
-          <div data-r="fade-up" data-r-delay="1" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-             <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', maxWidth: '280px', width: '100%' }}>
-                <img src="/Purvesh.JPG" alt="Purvesh Sarnaik" style={{ width: '100%', height: 'auto', display: 'block' }} />
-             </div>
-          </div>
-        </div>
+            {/* Text column */}
+            <div style={{ flex: 1, minWidth: '260px' }}>
+              {/* Role pill */}
+              <span style={{
+                display: 'inline-block',
+                background: 'rgba(139,92,246,0.18)', // Darker pill bg for dark theme
+                border: '1px solid rgba(139,92,246,0.35)',
+                borderRadius: '30px',
+                padding: '5px 14px',
+                fontSize: '10px',
+                fontWeight: 700,
+                letterSpacing: '1.5px',
+                textTransform: 'uppercase',
+                color: 'var(--violet)',
+                marginBottom: '18px',
+              }}>{role}</span>
 
-        <div className="heritage-grid" style={{ marginTop: '60px' }}>
-          <div data-r="fade-up">
-            <h3 style={{ font: '800 42px "Barlow Condensed"', color: '#fff', WebkitTextFillColor: '#fff', marginBottom: '10px' }}>Suryakumar Yadav (SKY)</h3>
-            <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontSize: '11px', color: 'var(--violet)', marginBottom: '25px', fontWeight: 'bold' }}>Brand Ambassador, Pro Govinda League Season 4</p>
-            <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#ded3e8', marginBottom: '20px' }}>
-              We are thrilled to welcome Indian cricket superstar Suryakumar Yadav as the official Brand Ambassador for the Pro Govinda League this year for Season 4! Known for his fearless approach and unmatched energy, SKY embodies the spirit and passion of the Govindas.
-            </p>
-            <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#ded3e8', marginBottom: '20px' }}>
-              With SKY joining the family, the league is set to reach new heights and inspire millions of young athletes across the nation.
-            </p>
-          </div>
-          <div data-r="fade-up" data-r-delay="1" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-             <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', maxWidth: '280px', width: '100%' }}>
-                <img src="/sky.jpeg" alt="Suryakumar Yadav (SKY)" style={{ width: '100%', height: 'auto', display: 'block' }} />
-             </div>
-          </div>
-        </div>
+              <h3 style={{
+                font: '900 48px/1 "Barlow Condensed"',
+                color: '#fff', // White heading on dark bg
+                WebkitTextFillColor: '#fff',
+                margin: '0 0 20px',
+                letterSpacing: '0.5px',
+              }}>{name}</h3>
 
-        <div className="heritage-grid reverse" style={{ marginTop: '60px' }}>
-          <div data-r="fade-up">
-            <h3 style={{ font: '800 42px "Barlow Condensed"', color: '#fff', WebkitTextFillColor: '#fff', marginBottom: '10px' }}>Bittu Boss</h3>
-            <p style={{ textTransform: 'uppercase', letterSpacing: '1px', fontSize: '11px', color: 'var(--violet)', marginBottom: '25px', fontWeight: 'bold' }}>Official Mascot, Pro Govinda League</p>
-            <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#ded3e8', marginBottom: '20px' }}>
-              Meet Bittu Boss, the official mascot of the Pro Govinda League! He has officially kicked off his city-wide promotional journey after seeking blessings at Shri Siddhivinayak Mandir, Mumbai, alongside his newly inaugurated mascot vehicle.
-            </p>
-            <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#ded3e8', marginBottom: '20px' }}>
-              Bittu Boss is now traveling across the city, meeting fans and Govindas to spread the excitement for Pro Govinda League Season 4. Keep following his journey—there’s a lot more coming!
-            </p>
-          </div>
-          <div data-r="fade-up" data-r-delay="1" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-             <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', maxWidth: '280px', width: '100%', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <img src="/bittu boss.jpeg" alt="Bittu Boss" style={{ width: '100%', height: '280px', objectFit: 'cover', transformOrigin: 'center', display: 'block' }} />
-             </div>
-          </div>
-        </div>
-        
+              <p style={{ fontSize: '15px', lineHeight: '1.9', color: '#c4b8c9', margin: 0 }}>{bio}</p>
 
+              {/* Decorative line */}
+              <div style={{
+                width: '40px',
+                height: '3px',
+                borderRadius: '2px',
+                background: 'linear-gradient(90deg, var(--violet), transparent)',
+                marginTop: '28px',
+              }} />
+            </div>
+          </div>
+        ))}
       </section>
     </>
   );
 }
-

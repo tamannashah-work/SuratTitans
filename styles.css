@@ -158,7 +158,7 @@
   .video-item { width: 200px; height: 355px; }
 }
 
-.hero h1 span, .hero h1 em { background: linear-gradient(to bottom, #ffffff 40%, #888b90 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: transparent; display: inline-block; }
+.hero h1 span, .hero h1 em, .hero-tagline span { background: linear-gradient(to bottom, #ffffff 85%, #888b90 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: transparent; display: inline-block; }
 
 .hero-tag { color: var(--purple) !important; }
 
@@ -263,4 +263,18 @@
     padding-left: 0;
     border-left: none;
   }
+}
+
+/* ── Hero Tagline Gradient Fix & Positioning ── */
+.hero-tagline {
+  margin-bottom: 10px;
+}
+.hero-tagline span {
+  line-height: normal !important; 
+  padding: 0 10px; /* Fixes right edge clipping for italics without breaking the vertical gradient */
+  background-size: 100% 100% !important;
+  background-position: center !important;
+}
+.hero-graphics {
+  margin-top: 40px; /* Brings the logo and tagline a little lower */
 }
