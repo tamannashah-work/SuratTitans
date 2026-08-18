@@ -56,7 +56,18 @@ const bittuBossVisit2026Gallery = [
   { src: '/bittu boss visit Surat Titans Team/WhatsApp Video 2026-08-10 at 10.58.48 PM.mp4', title: 'Bittu Boss Visits the Titans' }
 ];
 
+const bittuBossVisitAICGallery = [
+  { src: '/bittu boss visits aic/WhatsApp Image 2026-08-18 at 1.14.03 AM (1).jpeg', title: 'Bittu Boss Visits AIC' },
+  { src: '/bittu boss visits aic/WhatsApp Image 2026-08-18 at 1.14.03 AM.jpeg', title: 'Bittu Boss Visits AIC' },
+  { src: '/bittu boss visits aic/WhatsApp Image 2026-08-18 at 1.14.04 AM (1).jpeg', title: 'Bittu Boss Visits AIC' },
+  { src: '/bittu boss visits aic/WhatsApp Image 2026-08-18 at 1.14.04 AM (2).jpeg', title: 'Bittu Boss Visits AIC' },
+  { src: '/bittu boss visits aic/WhatsApp Image 2026-08-18 at 1.14.04 AM.jpeg', title: 'Bittu Boss Visits AIC' },
+  { src: '/bittu boss visits aic/WhatsApp Image 2026-08-18 at 1.14.05 AM.jpeg', title: 'Bittu Boss Visits AIC' }
+];
+
+
 const gallery2026 = [
+  { src: '/tshirt reveal fashion show.png', title: 'T-shirt Reveal Fashion Show' },
   tajGallery[0],
   bittuBossGallery[0],
   { src: '/2026/snapsave-app_3880082030319205049_60939500623.mp4', title: '2026 Season Video' },
@@ -94,7 +105,7 @@ const row1Images2026 = [];
 const row2Images2026 = [];
 const row3Images2026 = [];
 
-const all2026ImagesRaw = [...gallery2026, ...bittuBossVisit2026Gallery];
+const all2026ImagesRaw = [...gallery2026, ...bittuBossVisit2026Gallery, ...bittuBossVisitAICGallery];
 const seenSrcs = new Set();
 const all2026Images = [];
 
@@ -260,7 +271,7 @@ export default function Home() {
       <section className="hero" id="home">
         <div className="hero-content">
           <p className="kicker"><span></span> Official Pro Govinda League Franchise</p>
-          <h1><span>SURAT</span><br /><em>TITANS</em></h1>
+          <h1 className="titans"><span>SURAT</span><br /><em>TITANS</em></h1>
           <p className="hero-tag">POWER <b>•</b> PRIDE <b>•</b> LEGACY</p>
           <p className="hero-text">A new era of tradition. A global dream. Built on the courage and spirit of Mumbai.</p>
           <div className="actions">
@@ -276,7 +287,7 @@ export default function Home() {
 
         <div className="hero-graphics" data-r="stamp">
           <img src="/logo.png" alt="Surat Titans Logo" className="hero-logo" />
-          <span className="hero-tagline">
+          <span className="hero-tagline titans">
             <span className="stamp stamp-1">JOD</span>{" "}
             <span className="stamp stamp-2">KE</span>{" "}
             <span className="stamp stamp-3">TOD</span>

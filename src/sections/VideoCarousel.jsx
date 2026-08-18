@@ -2,6 +2,10 @@ import React from 'react';
 
 export default function VideoCarousel() {
   const videos = [
+    { id: 'bbw1', type: 'video', src: '/videos/Bittu Boss Welcome AIC - Reel.mp4' },
+    { id: 'tshirt1', type: 'video', src: '/videos/Tshirt Reveal Event .mp4', muted: true },
+    { id: 'tshirt2', type: 'video', src: '/videos/Tshirt Reveal Event 2026.mp4', muted: true },
+    { id: 'tshirt3', type: 'video', src: '/videos/tshirt reveal pyramid.mp4' },
     { id: 'bbv2', type: 'video', src: '/bittu boss visit Surat Titans Team/WhatsApp Video 2026-08-10 at 10.58.48 PM.mp4' },
     { id: 7, type: 'video', src: '/2026/snapsave-app_3880082030319205049_60939500623.mp4' },
     { id: 'falalnuma', type: 'video', src: '/videos/falalnuma reel.mp4' },
@@ -38,6 +42,7 @@ export default function VideoCarousel() {
                   src={video.src} 
                   controls 
                   preload="metadata"
+                  muted={video.muted}
                   style={{ width: '250px', height: '444px', borderRadius: '12px', objectFit: 'cover', display: 'block', backgroundColor: '#000' }} 
                 />
               ) : (

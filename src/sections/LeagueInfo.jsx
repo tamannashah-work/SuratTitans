@@ -134,7 +134,6 @@ export default function LeagueInfo() {
                 height: '320px',
                 borderRadius: '16px',
                 overflow: 'hidden',
-                border: '1px solid rgba(255,255,255,0.15)', // Lighter border on dark bg
                 boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
                 background: imgBg,
                 flexShrink: 0,
@@ -153,7 +152,6 @@ export default function LeagueInfo() {
                   height: '320px',
                   borderRadius: '16px',
                   overflow: 'hidden',
-                  border: '1px solid rgba(255,255,255,0.15)',
                   boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
                   background: imgBg,
                   flexShrink: 0,
