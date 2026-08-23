@@ -65,6 +65,11 @@ const bittuBossVisitAICGallery = [
   { src: '/bittu boss visits aic/WhatsApp Image 2026-08-18 at 1.14.05 AM.jpeg', title: 'Bittu Boss Visits AIC' }
 ];
 
+const harbhajanSinghGallery = [
+  { src: '/Harbhajan Singh Visit/WhatsApp Image 2026-08-23 at 10.20.55 AM.jpeg', title: 'Harbhajan Singh Visits' },
+  { src: '/Harbhajan Singh Visit/WhatsApp Image 2026-08-23 at 10.20.56 AM.jpeg', title: 'Harbhajan Singh Visits' },
+  { src: '/Harbhajan Singh Visit/WhatsApp Image 2026-08-23 at 10.20.57 AM.jpeg', title: 'Harbhajan Singh Visits' }
+];
 
 const gallery2026 = [
   { src: '/tshirt reveal fashion show.png', title: 'T-shirt Reveal Fashion Show' },
@@ -105,7 +110,7 @@ const row1Images2026 = [];
 const row2Images2026 = [];
 const row3Images2026 = [];
 
-const all2026ImagesRaw = [...gallery2026, ...bittuBossVisit2026Gallery, ...bittuBossVisitAICGallery];
+const all2026ImagesRaw = [...gallery2026, ...bittuBossVisit2026Gallery, ...bittuBossVisitAICGallery, ...harbhajanSinghGallery];
 const seenSrcs = new Set();
 const all2026Images = [];
 
@@ -287,11 +292,11 @@ export default function Home() {
 
         <div className="hero-graphics" data-r="stamp">
           <img src="/logo.png" alt="Surat Titans Logo" className="hero-logo" />
-          <span className="hero-tagline titans">
-            <span className="stamp stamp-1">JOD</span>{" "}
-            <span className="stamp stamp-2">KE</span>{" "}
-            <span className="stamp stamp-3">TOD</span>
-          </span>
+          <div className="hero-tagline" style={{ display: 'flex', gap: '15px', justifyContent: 'center', alignItems: 'center' }}>
+            <img src="/jod.png" alt="JOD" className="stamp stamp-1" style={{ height: 'clamp(40px, 5.5vw, 80px)', width: 'auto', objectFit: 'contain' }} />
+            <img src="/ke.png" alt="KE" className="stamp stamp-2" style={{ height: 'clamp(40px, 5.5vw, 80px)', width: 'auto', objectFit: 'contain' }} />
+            <img src="/tod.png" alt="TOD" className="stamp stamp-3" style={{ height: 'clamp(40px, 5.5vw, 80px)', width: 'auto', objectFit: 'contain' }} />
+          </div>
         </div>
 
         <p className="side-copy">MUMBAI · INDIA</p>
@@ -374,7 +379,7 @@ export default function Home() {
           <p>Meet the athletes who turn trust, timing and tenacity into something extraordinary.</p>
           <a className="button gold" href="#contact">Join the Titans <span>→</span></a>
         </div>
-        <div className="team-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', alignItems: 'start' }}>
+        <div className="team-cards" style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: '15px', alignItems: 'center' }}>
           <article className="athlete captain" data-r="scale" style={{ height: 'auto', padding: 0, background: 'transparent', overflow: 'hidden' }}>
             <img src="/bittu boss visit Surat Titans Team/WhatsApp Image 2026-08-10 at 11.00.24 PM (1).jpeg" alt="Team Photo 1" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '12px' }} />
           </article>
@@ -449,12 +454,24 @@ export default function Home() {
               <button onClick={() => setVideoModalSrc('/videos/practice session.mp4')} style={{ background: 'transparent', border: 'none', color: '#fff', textShadow: '0 2px 10px rgba(0,0,0,0.5)', pointerEvents: 'auto', cursor: 'pointer', textAlign: 'left', padding: 0, font: 'inherit', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.8px', fontWeight: 800 }}>Watch now →</button>
             </div>
           </article>
-          <article className="news-card" data-r="fade-up" style={{ position: 'relative', overflow: 'hidden', padding: 0, minHeight: '500px', gridColumn: '1 / -1' }}>
+          <article className="news-card" data-r="fade-up" data-r-delay="3" style={{ padding: 0, overflow: 'hidden', minHeight: '400px', display: 'flex' }}>
+            <iframe 
+              width="100%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/I4_VtuZfWFw" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+              style={{ flex: 1, border: 'none' }}
+            ></iframe>
+          </article>
+          <article className="news-card" data-r="fade-up" style={{ position: 'relative', overflow: 'hidden', padding: 0, minHeight: '400px', gridColumn: 'span 2' }}>
             <video autoPlay loop muted playsInline preload="none" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 0.6 }} src="/videos/Pro Govinda 2026 - AIC Video.mp4"></video>
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(20, 5, 30, 0.85), transparent)', zIndex: 1 }}></div>
             <div style={{ position: 'relative', zIndex: 2, padding: '30px', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'flex-end', pointerEvents: 'none' }}>
               <span style={{ color: '#ccc', pointerEvents: 'auto' }}>OFFICIAL PROMO</span>
-              <h3 style={{ color: '#fff', textShadow: '0 2px 10px rgba(0,0,0,0.5)', pointerEvents: 'auto', fontSize: '42px', margin: '10px 0' }}>THE TITANS ARE READY</h3>
+              <h3 style={{ color: '#fff', textShadow: '0 2px 10px rgba(0,0,0,0.5)', pointerEvents: 'auto', fontSize: '32px', margin: '10px 0' }}>THE TITANS ARE READY</h3>
               <button onClick={() => setVideoModalSrc('/videos/Pro Govinda 2026 - AIC Video.mp4')} style={{ background: 'transparent', border: 'none', color: '#fff', textShadow: '0 2px 10px rgba(0,0,0,0.5)', pointerEvents: 'auto', cursor: 'pointer', textAlign: 'left', padding: 0, font: 'inherit', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 800 }}>Watch promo →</button>
             </div>
           </article>

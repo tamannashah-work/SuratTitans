@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function VideoCarousel() {
   const videos = [
+    { id: 'harbhajan1', type: 'video', src: '/Harbhajan Singh Visit/AIC - Harbhajansingh Reel.mp4' },
     { id: 'bbw1', type: 'video', src: '/videos/Bittu Boss Welcome AIC - Reel.mp4' },
     { id: 'tshirt1', type: 'video', src: '/videos/Tshirt Reveal Event .mp4', muted: true },
     { id: 'tshirt2', type: 'video', src: '/videos/Tshirt Reveal Event 2026.mp4', muted: true },

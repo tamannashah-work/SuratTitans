@@ -121,7 +121,7 @@ export default function App() {
       </Routes>
 
       <footer>
-        <a className="brand" href="/#home"><img src="/logo.png" alt="ST Logo" style={{ height: '55px', width: 'auto' }} /><span>SURAT TITANS</span></a>
+        <a className="brand" href="/#home"><img src="/logo with jod ke tod.png" alt="ST Logo" style={{ height: '55px', width: 'auto' }} /><span>SURAT TITANS</span></a>
         <p>© 2026 Surat Titans. Power. Pride. Legacy.</p>
         <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
           <a href="https://www.instagram.com/surat_titans/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><InstagramIcon /> Surat Titans</a>
