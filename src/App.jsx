@@ -98,7 +98,9 @@ export default function App() {
     <>
       <div className="top-banner">
         <span className="banner-dates">OFFICIAL MATCH DATES ANNOUNCED 25 &bull; 26 &bull; 27 AUGUST 2026</span>
-        <span className="banner-stream">STREAMING ON JIO HOTSTAR</span>
+        <span className="banner-stream">
+          PRO GOVINDA SEASON 4 STREAMING ON JIO HOTSTAR - <a href="https://www.hotstar.com/in/shows/pro-govinda-league/1271684186" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', fontWeight: 'bold' }}>Watch now</a>
+        </span>
       </div>
       <header className={`header ${scrolled || isCoOwnersPage ? 'scrolled' : ''}`}>
         <a className="brand" href="/#home" aria-label="Surat Titans home"><img src="/logo.png" alt="ST Logo" style={{ height: '55px', width: 'auto' }} /><span>SURAT TITANS</span></a>
